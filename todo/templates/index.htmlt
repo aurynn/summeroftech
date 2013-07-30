@@ -1,13 +1,16 @@
 <html>
 	<body>
+		<form action="/done" method="post">
 		<ul>
 			{% for item in todo %}
-				<li>
+				<li><input type="checkbox" id="{{item.id}}">
 					{% if item.done %}<del>{%endif%}
 					{{ item.content }}
 					{%if item.done %}</del>{%endif%}
-				</li>
+			</input></li>
 			{% endfor %}
 		</ul>
+		<input type="submit" text="done">
+		</form>
 	</body>
 </html>
