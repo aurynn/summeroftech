@@ -2,7 +2,11 @@
 	<body>
 		<ul>
 			{% for item in todo %}
-				<li>{{ item.content }}</li>
+				<li>
+					{% if item.done %}<del>{%endif%}
+					{{ item.content }}
+					{%if item.done %}</del>{%endif%}
+				</li>
 			{% endfor %}
 		</ul>
 	</body>
