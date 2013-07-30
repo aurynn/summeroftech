@@ -1,0 +1,9 @@
+<html>
+	<body>
+		<ul>
+			{% for item in todo %}
+				<li>{{ item.content }}</li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>
