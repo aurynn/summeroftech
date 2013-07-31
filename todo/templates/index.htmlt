@@ -1,9 +1,10 @@
 <html>
 	<body>
-		<form action="/done" method="post">
+		<form action="/done/" method="post">
+			{% csrf_token %}
 		<ul>
 			{% for item in todo %}
-				<li><input type="checkbox" id="{{item.id}}">
+				<li><input type="checkbox" name="mark_as_done" value="{{item.id}}">
 					{% if item.done %}<del>{%endif%}
 					{{ item.content }}
 					{%if item.done %}</del>{%endif%}

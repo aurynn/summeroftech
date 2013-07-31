@@ -16,5 +16,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     # Our own views
-    url(r'^$', 'todo.views.index')
+    url(r'^$', 'todo.views.index'),
+    url(r'^done/$', 'todo.views.done'),
 )
