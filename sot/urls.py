@@ -18,4 +18,5 @@ urlpatterns = patterns('',
     # Our own views
     url(r'^$', 'todo.views.index'),
     url(r'^done/$', 'todo.views.done'),
+    url(r"^new/$", 'todo.views.new')
 )
