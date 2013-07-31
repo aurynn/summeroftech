@@ -13,5 +13,10 @@
 		</ul>
 		<input type="submit" text="done">
 		</form>
+		<form action="/new/" method="post">
+			{% csrf_token %}
+			<input type="text" name="todo">
+			<input type="submit" value="Add Todo">
+		</form>
 	</body>
 </html>
